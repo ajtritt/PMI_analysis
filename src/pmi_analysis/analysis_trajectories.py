@@ -16,7 +16,7 @@ import subprocess
 import pandas as pd
 import numpy as np
 import multiprocessing as mp
-from equilibration import detectEquilibration
+from .equilibration import detectEquilibration
 import hdbscan
 
 import IMP

@@ -5,15 +5,14 @@ import glob
 import sys
 import os
 
-sys.path.append('/home/ignacia/SOFTW/PMI_analysis/pyext/src/')
-from analysis_trajectories import *
+from pmi_analysis.analysis_trajectories import *
 
 #################################
 ########### MAIN ################
 #################################
 
 nproc = 10
-top_dir =  sys.argv[1] 
+top_dir =  sys.argv[1]
 analys_dir = top_dir+'/analys/'
 
 # Check if analysis dir exists
