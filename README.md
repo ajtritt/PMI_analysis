@@ -1,4 +1,7 @@
-These scripts are used to analyze a series of trajectories, look at their scores, determine when each score has equilibrated, and select models for further analysis. Sample scrips are in the *example* folder. These scripts assume that you are a series of IMP runs named run_0, run_1, ...
+These scripts are used to analyze a series of trajectories, look at their
+scores, determine when each score has equilibrated, and select models for
+further analysis. Sample scrips are in the *example* folder. These scripts
+assume that you are a series of IMP runs named run_0, run_1, ...
 
 ## Dependencies:
 * multiprocessing
@@ -7,6 +10,44 @@ These scripts are used to analyze a series of trajectories, look at their scores
 * pandas
 * matplotlib
 * pyrmsd
+
+
+## Installation:
+
+The following commands will install the code in this repository in such a way
+that will allow one to use the tools provided by said code.  With that said,
+the provided sequence of commands may not suit your specific needs. As this
+repository follows PEP 517 style packaging, there are many ways to install the
+software, so please use discretion and adapt as necessary.
+
+```bash
+git clone git@github.com:salilab/PMI_analysis.git
+cd PMI_analysis
+pip install -r requirements.txt   # This will fail, see below
+pip install .
+```
+
+### Installation alternatives:
+
+Because this package is structured in such a way that pip can understand, we
+can use pip functionalities, such as editable mode. This will install the 
+package into your environment using an *egg link*. The details of what an 
+egg link exactly is are not important--it is simply mentioned here so that 
+you are aware of it in case you come across any `*.egg-link` files. They are
+pip's way of using your source code. This is effectiebly a symbolic link to
+your source code. 
+
+To install this code in editable mode, just add the `-e/--editiable` flag
+to the `pip install .` command above. 
+
+#### PyRMSD
+
+If you can't get `pyrmsd` to install with pip, you can probably get by with
+a conda-forge build. e.g.
+
+```bash
+conda install -c conda-forge pyrmsd
+```
 
 ## Analysis steps:
 
