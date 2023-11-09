@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pmi_analysis"
+authors = [
+  { name="Ben Webb", email="ben@salilab.org" },
+  { name="Ignacia Echeverria", email="ignacia@salilab.org" },
+]
+description = "A package for post-processing and analysis of IMP outputs"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "BSD-3-Clause"}
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: BSD License",
+    "Development Status :: 2 - Pre-Alpha",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+keywords = [
+    "python",
+]
+
+dependencies = [
+    "hdbscan",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "pyrmsd",
+]
+
+dynamic = ["version"]
+
+# [project.scripts]
+# pmi_analysis = "pmi_analysis:main"
