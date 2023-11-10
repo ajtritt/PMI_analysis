@@ -559,6 +559,8 @@ class AnalysisTrajectories(object):
             self.out_dirs[((self.nproc - 1) * ND): (len(self.out_dirs))]
         )
 
+        breakpoint()
+
         # Setup a list of processes that we want to run
         processes = [
             mp.Process(target=self.read_traj_info, args=((out_dirs_dict[x],)))

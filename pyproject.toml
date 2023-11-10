@@ -36,5 +36,5 @@ dependencies = [
 
 dynamic = ["version"]
 
-# [project.scripts]
-# pmi_analysis = "pmi_analysis:main"
+[project.scripts]
+run_analysis_trajectories = "pmi_analysis.bin.run_analysis_trajectories:main"
